@@ -5,29 +5,34 @@ import ParallaxSection from '../components/ParallaxSection'
 export default function Home() {
   return (
     <div className="min-h-screen bg-slate-50">
-      {/* Hero Section with Parallax Background */}
-      <section 
-        className="relative h-[80vh] bg-cover bg-no-repeat"
-        style={{
-          backgroundImage: "url('/images/hero/SvenHeroImage')",
-          backgroundSize: 'cover',
-          backgroundPosition: '30% center',
-          backgroundAttachment: 'scroll'
-        }}
-      >
+      {/* Hero Section with Next.js Image */}
+      <section className="relative h-[80vh] overflow-hidden">
+        {/* Background Image using Next.js Image component */}
+        <Image
+          src="/images/hero/SvenHeroImage.jpg"
+          alt="Sven Lauridsen Kontormontage hero background"
+          fill
+          className="object-cover object-[30%_center]"
+          priority
+          sizes="100vw"
+        />
+        
         {/* Dark overlay for text readability */}
-        <div className="absolute inset-0 bg-gradient-to-r from-slate-900/70 to-slate-700/50"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-900/70 to-slate-700/50 z-10"></div>
         
         {/* Text content - responsive positioning */}
-        <div className="relative h-full flex items-center justify-end pt-16 md:pt-18 lg:pt-20 xl:pt-22">
+        <div className="relative h-full flex items-center justify-end pt-16 md:pt-18 lg:pt-20 xl:pt-22 z-20">
           <div className="max-w-15xl mx-auto w-full flex justify-end px-4 sm:px-6 lg:px-8">
             <div className="text-right pr-4 sm:pr-8 md:pr-12 lg:pr-16 xl:pr-20 2xl:pr-24">
               {/* Logo prominently displayed - responsive sizing */}
               <div className="mb-4 flex justify-end">
-                <img 
-                  src="/images/logo/sven-lauridsen-logo.png" 
-                  alt="Sven Lauridsen Kontormontage" 
+                <Image
+                  src="/images/logo/sven-lauridsen-logo.png"
+                  alt="Sven Lauridsen Kontormontage"
+                  width={800}
+                  height={600}
                   className="h-32 sm:h-48 md:h-56 lg:h-72 xl:h-80 2xl:h-96 w-auto drop-shadow-2xl"
+                  priority
                 />
               </div>
               
