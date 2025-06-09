@@ -16,43 +16,35 @@ export const viewport: Viewport = {
 const customers = [
   {
     name: 'Montana',
-    logo: '/images/Customers/Montana.png',
-    testimonial: '[Testimonial fra Montana kommer her - beskrivelse af det arbejde Sven har udført for Montana og deres oplevelse med servicen]'
+    logo: '/images/Customers/Montana.png'
   },
   {
     name: 'Rovio',
-    logo: '/images/Customers/Rovio.png',
-    testimonial: '[Testimonial fra Rovio kommer her - beskrivelse af det arbejde Sven har udført for Rovio og deres oplevelse med servicen]'
+    logo: '/images/Customers/Rovio.png'
   },
   {
     name: 'Mood Visuals',
-    logo: '/images/Customers/Mood Visuals.png',
-    testimonial: '[Testimonial fra Mood Visuals kommer her - beskrivelse af det arbejde Sven har udført for Mood Visuals og deres oplevelse med servicen]'
+    logo: '/images/Customers/Mood Visuals.png'
   },
   {
     name: 'IO Interactive',
-    logo: '/images/Customers/IO-Interactive.png',
-    testimonial: '[Testimonial fra IO Interactive kommer her - beskrivelse af det arbejde Sven har udført for IO Interactive og deres oplevelse med servicen]'
+    logo: '/images/Customers/IO-Interactive.png'
   },
   {
     name: 'Swiss Re',
-    logo: '/images/Customers/Swiss Ree.jpg',
-    testimonial: '[Testimonial fra Swiss Re kommer her - beskrivelse af det arbejde Sven har udført for Swiss Re og deres oplevelse med servicen]'
+    logo: '/images/Customers/Swiss Ree.jpg'
   },
   {
     name: 'The Body Shop',
-    logo: '/images/Customers/The Body Shop.png',
-    testimonial: '[Testimonial fra The Body Shop kommer her - beskrivelse af det arbejde Sven har udført for The Body Shop og deres oplevelse med servicen]'
+    logo: '/images/Customers/The Body Shop.png'
   },
   {
     name: 'Statsministeriet',
-    logo: '/images/Customers/Statsministeriet.jpg',
-    testimonial: '[Testimonial fra Statsministeriet kommer her - beskrivelse af det arbejde Sven har udført for Statsministeriet og deres oplevelse med servicen]'
+    logo: '/images/Customers/Statsministeriet.jpg'
   },
   {
     name: 'HK',
-    logo: '/images/Customers/HK.png',
-    testimonial: '[Testimonial fra HK kommer her - beskrivelse af det arbejde Sven har udført for HK og deres oplevelse med servicen]'
+    logo: '/images/Customers/HK.png'
   }
 ]
 
@@ -88,66 +80,30 @@ export default function Referencer() {
             <div className="w-16 h-1 bg-gradient-to-r from-blue-500 to-cyan-400 mx-auto mb-8"></div>
             <p className="text-base text-slate-600 leading-relaxed font-light max-w-3xl mx-auto">
               Gennem mere end 20 år har vi haft fornøjelsen af at arbejde med mange forskellige virksomheder 
-              og institutioner. Her kan du læse om deres oplevelser med vores service.
+              og institutioner.
             </p>
           </section>
 
-          {/* Customer Testimonials */}
-          <section className="space-y-12">
-            {customers.map((customer, index) => (
-              <div 
-                key={customer.name}
-                className={`bg-white rounded-2xl shadow-lg border border-slate-100 p-8 sm:p-12 ${
-                  index % 2 === 0 ? '' : 'bg-slate-50'
-                }`}
-              >
-                <div className={`grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center ${
-                  index % 2 === 0 ? '' : 'lg:grid-cols-2'
-                }`}>
-                  
-                  {/* Logo Section */}
-                  <div className={`${index % 2 === 0 ? 'order-1' : 'order-2 lg:order-1'}`}>
-                    <div className={`${customer.name === 'Mood Visuals' ? 'bg-slate-900' : 'bg-white'} rounded-xl p-8 shadow-sm border border-slate-100 flex items-center justify-center min-h-[200px]`}>
-                      <div className="relative w-full h-32 flex items-center justify-center">
-                        <Image
-                          src={customer.logo}
-                          alt={`${customer.name} logo`}
-                          fill
-                          className={`object-contain ${customer.name === 'Mood Visuals' ? 'filter brightness-0 invert' : ''}`}
-                          sizes="(max-width: 768px) 100vw, 50vw"
-                        />
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Testimonial Section */}
-                  <div className={`${index % 2 === 0 ? 'order-2' : 'order-1 lg:order-2'}`}>
-                    <div className="space-y-6">
-                      <h3 className="text-xl sm:text-2xl font-medium text-slate-800 tracking-wide">
-                        {customer.name}
-                      </h3>
-                      
-                      {/* Quote Icon */}
-                      <div className="text-blue-500">
-                        <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
-                          <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z"/>
-                        </svg>
-                      </div>
-                      
-                      {/* Testimonial Text */}
-                      <blockquote className="text-base text-slate-600 leading-relaxed font-light italic">
-                        {customer.testimonial}
-                      </blockquote>
-                      
-                      {/* Placeholder indicator */}
-                      <div className="text-sm text-slate-400 bg-slate-100 rounded-lg p-3 border-l-4 border-blue-200">
-                        <span className="font-medium">Note:</span> Testimonial kommer snart
-                      </div>
-                    </div>
+          {/* Customer Logos */}
+          <section>
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+              {customers.map((customer) => (
+                <div 
+                  key={customer.name}
+                  className="bg-white rounded-xl shadow-lg border border-slate-100 p-6 flex items-center justify-center min-h-[160px] hover:shadow-xl transition-shadow duration-300"
+                >
+                  <div className={`${customer.name === 'Mood Visuals' ? 'bg-slate-900 rounded-lg p-4' : ''} w-full h-24 relative`}>
+                    <Image
+                      src={customer.logo}
+                      alt={`${customer.name} logo`}
+                      fill
+                      className={`object-contain ${customer.name === 'Mood Visuals' ? 'filter brightness-0 invert' : ''}`}
+                      sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                    />
                   </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </section>
 
           {/* Call to Action */}

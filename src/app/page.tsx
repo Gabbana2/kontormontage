@@ -9,7 +9,7 @@ export default function Home() {
       <section 
         className="relative h-[80vh] bg-cover bg-no-repeat"
         style={{
-          backgroundImage: "url('/images/hero/SvenHeroImage.jpg')",
+          backgroundImage: "url('/images/hero/SvenHeroImage')",
           backgroundSize: 'cover',
           backgroundPosition: '30% center',
           backgroundAttachment: 'scroll'
