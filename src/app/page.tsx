@@ -343,101 +343,37 @@ export default function Home() {
               <h3 className="text-xl sm:text-2xl font-medium text-slate-700 mb-8 tracking-wide">
                 Betroet af førende virksomheder
               </h3>
-              <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-6 items-center justify-items-center">
-                <div className="bg-white rounded-lg p-4 shadow-sm border border-slate-100 hover:shadow-md transition-shadow duration-300 w-full h-20 flex items-center justify-center">
-                  <div className="relative w-full h-12">
-                    <Image
-                      src="/images/Customers/Montana.png"
-                      alt="Montana"
-                      fill
-                      className="object-contain filter grayscale hover:grayscale-0 transition-all duration-300"
-                      sizes="(max-width: 768px) 50vw, (max-width: 1024px) 25vw, 12.5vw"
-                    />
-                  </div>
+              <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4 items-center justify-items-center">
+                <div className="bg-white rounded-lg p-3 shadow-sm border border-slate-100 hover:shadow-md transition-shadow duration-300 w-full h-16 flex items-center justify-center">
+                  <span className="text-sm font-medium text-slate-700 text-center">Montana</span>
                 </div>
                 
-                <div className="bg-white rounded-lg p-4 shadow-sm border border-slate-100 hover:shadow-md transition-shadow duration-300 w-full h-20 flex items-center justify-center">
-                  <div className="relative w-full h-12">
-                    <Image
-                      src="/images/Customers/Rovio.png"
-                      alt="Rovio"
-                      fill
-                      className="object-contain filter grayscale hover:grayscale-0 transition-all duration-300"
-                      sizes="(max-width: 768px) 50vw, (max-width: 1024px) 25vw, 12.5vw"
-                    />
-                  </div>
+                <div className="bg-white rounded-lg p-3 shadow-sm border border-slate-100 hover:shadow-md transition-shadow duration-300 w-full h-16 flex items-center justify-center">
+                  <span className="text-sm font-medium text-slate-700 text-center">Rovio</span>
                 </div>
                 
-                <div className="bg-slate-900 rounded-lg p-4 shadow-sm border border-slate-100 hover:shadow-md transition-shadow duration-300 w-full h-20 flex items-center justify-center">
-                  <div className="relative w-full h-12">
-                    <Image
-                      src="/images/Customers/Mood Visuals.png"
-                      alt="Mood Visuals"
-                      fill
-                      className="object-contain filter brightness-0 invert hover:brightness-100 hover:invert-0 transition-all duration-300"
-                      sizes="(max-width: 768px) 50vw, (max-width: 1024px) 25vw, 12.5vw"
-                    />
-                  </div>
+                <div className="bg-white rounded-lg p-3 shadow-sm border border-slate-100 hover:shadow-md transition-shadow duration-300 w-full h-16 flex items-center justify-center">
+                  <span className="text-sm font-medium text-slate-700 text-center">Mood Visuals</span>
                 </div>
                 
-                <div className="bg-white rounded-lg p-4 shadow-sm border border-slate-100 hover:shadow-md transition-shadow duration-300 w-full h-20 flex items-center justify-center">
-                  <div className="relative w-full h-12">
-                    <Image
-                      src="/images/Customers/IO-Interactive.png"
-                      alt="IO Interactive"
-                      fill
-                      className="object-contain filter grayscale hover:grayscale-0 transition-all duration-300"
-                      sizes="(max-width: 768px) 50vw, (max-width: 1024px) 25vw, 12.5vw"
-                    />
-                  </div>
+                <div className="bg-white rounded-lg p-3 shadow-sm border border-slate-100 hover:shadow-md transition-shadow duration-300 w-full h-16 flex items-center justify-center">
+                  <span className="text-sm font-medium text-slate-700 text-center">IO Interactive</span>
                 </div>
                 
-                <div className="bg-white rounded-lg p-4 shadow-sm border border-slate-100 hover:shadow-md transition-shadow duration-300 w-full h-20 flex items-center justify-center">
-                  <div className="relative w-full h-12">
-                    <Image
-                      src="/images/Customers/Swiss Ree.jpg"
-                      alt="Swiss Re"
-                      fill
-                      className="object-contain filter grayscale hover:grayscale-0 transition-all duration-300"
-                      sizes="(max-width: 768px) 50vw, (max-width: 1024px) 25vw, 12.5vw"
-                    />
-                  </div>
+                <div className="bg-white rounded-lg p-3 shadow-sm border border-slate-100 hover:shadow-md transition-shadow duration-300 w-full h-16 flex items-center justify-center">
+                  <span className="text-sm font-medium text-slate-700 text-center">Swiss Re</span>
                 </div>
                 
-                <div className="bg-white rounded-lg p-4 shadow-sm border border-slate-100 hover:shadow-md transition-shadow duration-300 w-full h-20 flex items-center justify-center">
-                  <div className="relative w-full h-12">
-                    <Image
-                      src="/images/Customers/The Body Shop.png"
-                      alt="The Body Shop"
-                      fill
-                      className="object-contain filter grayscale hover:grayscale-0 transition-all duration-300"
-                      sizes="(max-width: 768px) 50vw, (max-width: 1024px) 25vw, 12.5vw"
-                    />
-                  </div>
+                <div className="bg-white rounded-lg p-3 shadow-sm border border-slate-100 hover:shadow-md transition-shadow duration-300 w-full h-16 flex items-center justify-center">
+                  <span className="text-sm font-medium text-slate-700 text-center">The Body Shop</span>
                 </div>
                 
-                <div className="bg-white rounded-lg p-4 shadow-sm border border-slate-100 hover:shadow-md transition-shadow duration-300 w-full h-20 flex items-center justify-center">
-                  <div className="relative w-full h-12">
-                    <Image
-                      src="/images/Customers/Statsministeriet.jpg"
-                      alt="Statsministeriet"
-                      fill
-                      className="object-contain filter grayscale hover:grayscale-0 transition-all duration-300"
-                      sizes="(max-width: 768px) 50vw, (max-width: 1024px) 25vw, 12.5vw"
-                    />
-                  </div>
+                <div className="bg-white rounded-lg p-3 shadow-sm border border-slate-100 hover:shadow-md transition-shadow duration-300 w-full h-16 flex items-center justify-center">
+                  <span className="text-sm font-medium text-slate-700 text-center">Statsministeriet</span>
                 </div>
                 
-                <div className="bg-white rounded-lg p-4 shadow-sm border border-slate-100 hover:shadow-md transition-shadow duration-300 w-full h-20 flex items-center justify-center">
-                  <div className="relative w-full h-12">
-                    <Image
-                      src="/images/Customers/HK.png"
-                      alt="HK"
-                      fill
-                      className="object-contain filter grayscale hover:grayscale-0 transition-all duration-300"
-                      sizes="(max-width: 768px) 50vw, (max-width: 1024px) 25vw, 12.5vw"
-                    />
-                  </div>
+                <div className="bg-white rounded-lg p-3 shadow-sm border border-slate-100 hover:shadow-md transition-shadow duration-300 w-full h-16 flex items-center justify-center">
+                  <span className="text-sm font-medium text-slate-700 text-center">HK</span>
                 </div>
               </div>
               

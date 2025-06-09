@@ -1,6 +1,5 @@
 import { Metadata, Viewport } from 'next'
 import ParallaxSection from '@/components/ParallaxSection'
-import Image from 'next/image'
 
 export const metadata: Metadata = {
   title: 'Referencer - Sven Lauridsen Kontormontage',
@@ -84,23 +83,17 @@ export default function Referencer() {
             </p>
           </section>
 
-          {/* Customer Logos */}
+          {/* Customer Names */}
           <section>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
               {customers.map((customer) => (
                 <div 
                   key={customer.name}
-                  className="bg-white rounded-xl shadow-lg border border-slate-100 p-6 flex items-center justify-center min-h-[160px] hover:shadow-xl transition-shadow duration-300"
+                  className="bg-white rounded-xl shadow-lg border border-slate-100 p-6 flex items-center justify-center min-h-[120px] hover:shadow-xl transition-all duration-300 hover:scale-105"
                 >
-                  <div className={`${customer.name === 'Mood Visuals' ? 'bg-slate-900 rounded-lg p-4' : ''} w-full h-24 relative`}>
-                    <Image
-                      src={customer.logo}
-                      alt={`${customer.name} logo`}
-                      fill
-                      className={`object-contain ${customer.name === 'Mood Visuals' ? 'filter brightness-0 invert' : ''}`}
-                      sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
-                    />
-                  </div>
+                  <h3 className="text-lg md:text-xl font-medium text-slate-800 text-center tracking-wide leading-tight">
+                    {customer.name}
+                  </h3>
                 </div>
               ))}
             </div>
